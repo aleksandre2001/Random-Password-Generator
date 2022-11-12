@@ -145,14 +145,14 @@ div.option label {
 
 /* /////////////// */
 .password-box:active {
-  background: rgba(0, 0, 0, 0.3);
+  background: #273549;
 }
 
 /* /////////////// */
 
 .password-box {
   /* Background  */
-  background: #273549;
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 6px;
   margin-top: 15px;
   padding: 5px 5px;
