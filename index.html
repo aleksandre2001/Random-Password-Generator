@@ -1,26 +1,88 @@
 <html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Karla:wght@800&display=swap" rel="stylesheet">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet"> 
-    </head>
-    
-    <body>
-        <div class="container">
-             
-            <h1>Generate a <span> random password</span> </h1>
-            <p id="hint"> Never use an insecure password again.</p>
-            <div id="generate-btn"> Generate passwords</div>
-            <hr style="color:#2F3E53">
-            <div class="password-container">
-                <div class="password-box" id="passwordOne"></div>
-                <div class="password-box" id="passwordTwo"></div>
-            </div>    
-            <script src="index.js"></script>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Karla:wght@800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1>Generate a <span id="span-h1"> random password</span></h1>
+        <p id="hint">Never use an insecure password again.</p>
+      </div>
+
+      <!-- range slider -->
+
+      <div class="range">
+        <p>Password Length</p>
+
+        <span id="output-span">8</span>
+        <input id="my-range" type="range" min="4" max="15" value="8" />
+      </div>
+
+      <!-- options -->
+      <div class="options">
+        <!-- option1 -->
+        <div class="option">
+          <label>
+            <input type="checkbox" id="uppercasesCb" checked />
+            <span>Uppercase</span>
+          </label>
         </div>
-    </body>
+
+        <!-- option2 -->
+        <div class="option">
+          <label>
+            <input type="checkbox" id="lowercasesCb" />
+            <span>Lowercase</span>
+          </label>
+        </div>
+
+        <!-- option3 -->
+        <div class="option">
+          <label>
+            <input type="checkbox" id="numbersCb" />
+            <span>Numbers</span>
+          </label>
+        </div>
+
+        <!-- option4 -->
+        <div class="option">
+          <label>
+            <input type="checkbox" id="symbolsCb" />
+
+            <span>Symbols</span>
+          </label>
+        </div>
+      </div>
+      <p id="minimum-one"></p>
+      <button id="generate-btn">Generate passwords</button>
+
+      <hr style="color: #2f3e53;" />
+      <p id="click-copy-hint">Click to copy!</p>
+
+      <div class="password-container">
+        <div class="password-box" id="password-one"></div>
+
+        <div class="password-box" id="password-two"></div>
+      </div>
+
+      <script src="index.js"></script>
+    </div>
+  </body>
 </html>
